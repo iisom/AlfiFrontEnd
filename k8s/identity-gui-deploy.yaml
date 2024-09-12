@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alfi-frontend
+  namespace: default
+  labels:
+    app: alfi-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alfi-frontend
+  template:
+    metadata:
+      labels:
+        app: alfi-frontend
+    spec:
+      imagePullSecrets: # Be sure the token name matches what you created on K8s
+          - name: alfi-frontend-deploy-token
+      containers:
+        - name: alfi-frontend
+          image: $IMAGE
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
