@@ -1,0 +1,78 @@
+:root {
+    --primary-bg: #DFDFDF; 
+    --secondary-text-color: #ED0800; 
+    --border-radius: 8px;
+    --speed: 500ms;
+    --background: #4A6C6F; 
+    --lighter-bg: #F4F4F4; 
+    --text-color: #333; 
+}
+
+.content .IdentityApp div {
+    padding: 1em;
+}
+
+
+.IdentityApp input[type=text], .IdentityApp input[type=password], .IdentityApp select {
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.IdentityApp input[type=submit], .IdentityApp button[type=submit], .IdentityApp button {
+    background-color: #0b5ed7;
+    padding: 1em;
+    border: none;
+    border-radius: 0.50em;
+    width: 100%;
+    text-decoration: none; 
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.IdentityApp input[type=submit]:hover, .IdentityApp button[type=submit]:hover, .IdentityApp button:hover {
+    background-color: var(--primary-bg); 
+    color: black;
+}
+
+.IdentityApp form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.IdentityApp form label {
+    display: flex;
+    align-items: center;
+}
+
+.IdentityApp nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--navy);
+}
+
+.IdentityApp nav li {
+    float: left;
+}
+
+.IdentityApp nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.IdentityApp nav li a:hover {
+    background-color: var(--lightorange);
+}
+
+.IdentityApp nav li a.active {
+    background-color: var(--orange);
+}
